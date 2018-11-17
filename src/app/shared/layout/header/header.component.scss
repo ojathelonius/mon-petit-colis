@@ -1,0 +1,23 @@
+.header-container {
+    height: 150px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-family: Ludicrous;
+        text-shadow: 2px 2px #d9aa76;
+        color: #4d4d4d;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-size: 35px;
+    }
+
+    .logo {
+        height: 50px;
+        margin-right: 20px;
+    }
+    
+}
