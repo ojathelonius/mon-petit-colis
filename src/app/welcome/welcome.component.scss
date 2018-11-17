@@ -1,8 +1,20 @@
 h1 {
-    font-family: Luna;
+    font-family: Ludicrous;
     text-shadow: 2px 2px #d9aa76;
     color: #4d4d4d;
     text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 35px;
+}
+
+h2 {
+    font-family: Ludicrous;
+    color: #4d4d4d;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 40px;
+    letter-spacing: 5px;
 }
 
 .container {
@@ -16,5 +28,12 @@ h1 {
 }
 
 .logo {
-    height: 120px;
+    height: 80px;
+    -webkit-animation: rotation 1.5s infinite linear;
+}
+
+/* Rotating animation */
+@-webkit-keyframes rotation {
+    from {-webkit-transform: rotate(0deg);}
+    to   {-webkit-transform: rotate(359deg);}
 }
