@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+/* SCSS reset */
+@import "./node_modules/normalize-scss/sass/normalize/import-now";
+
+@font-face {
+  font-family: Luna;
+  src: url(assets/fonts/Luna.ttf) format("truetype");
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
