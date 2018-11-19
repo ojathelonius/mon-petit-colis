@@ -1,11 +1,11 @@
 /* SCSS reset */
 @import "./node_modules/normalize-scss/sass/normalize/import-now";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 @font-face {
   font-family: Luna;
   src: url(assets/fonts/Luna.ttf) format("truetype");
 }
-
 
 @font-face {
   font-family: Ludicrous;
@@ -15,4 +15,5 @@
 html, body {
   height: 100%;
   margin: 0;
+  font-family: 'Open Sans', sans-serif;
 }

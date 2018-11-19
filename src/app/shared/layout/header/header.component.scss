@@ -1,9 +1,10 @@
 .header-container {
-    height: 150px;
+    height: 100px;
     background-color: white;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    box-shadow: 0px 1px 15px 2px #90909024;
 
     h1 {
         font-family: Ludicrous;
@@ -12,12 +13,31 @@
         text-align: center;
         text-transform: uppercase;
         letter-spacing: 5px;
-        font-size: 35px;
+        font-size: 25px;
     }
 
-    .logo {
-        height: 50px;
-        margin-right: 20px;
+    .logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .logo {
+            height: 30px;
+            margin-right: 20px;
+        }
+    }
+
+    ul {
+        display: flex;
+
+        li {
+            list-style-type: none;
+            text-transform: uppercase;
+            margin-right: 20px;
+            color: #6f6666;
+            cursor: pointer;
+            font-weight: bold;
+        }
     }
     
 }
