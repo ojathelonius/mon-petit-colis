@@ -29,3 +29,7 @@ html, body {
   flex-direction: column;
   height: 100%;
 }
+
+*:focus {
+  outline: none;
+}
