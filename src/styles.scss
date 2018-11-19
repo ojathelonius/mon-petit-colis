@@ -17,3 +17,15 @@ html, body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
 }
+
+.main-container {
+  flex: 1;
+  background-color: #ffeede2e;
+  z-index: -1
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
