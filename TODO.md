@@ -1,0 +1,1 @@
+* Use PointLight to cast shadow on element, see the [LightShadow docs](https://threejs.org/docs/#api/en/lights/shadows/LightShadow)
