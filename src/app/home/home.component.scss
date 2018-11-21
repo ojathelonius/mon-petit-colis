@@ -1,0 +1,19 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+
+    .section-row {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .section {
+            padding: 20px;
+            flex: 0 0 400px;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            margin: 10px;
+        }
+    }
+}
