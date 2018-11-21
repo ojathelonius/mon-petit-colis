@@ -12,6 +12,7 @@ import { AxesHelperDirective } from './objects/helpers/axes-helper.directive';
 import { GridHelperDirective } from './objects/helpers/grid-helper.directive';
 import { ObjectLoaderDirective } from './objects/loaders/object-loader.directive';
 import { PointLightDirective } from './objects/light/point-light.directive';
+import { CubeDirective } from './objects/geometry/cube.directive';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { PointLightDirective } from './objects/light/point-light.directive';
     AxesHelperDirective,
     GridHelperDirective,
     ObjectLoaderDirective,
-    PointLightDirective
+    PointLightDirective,
+    CubeDirective
   ],
   exports: [
     OrbitControlsDirective,
@@ -44,7 +46,8 @@ import { PointLightDirective } from './objects/light/point-light.directive';
     AxesHelperDirective,
     GridHelperDirective,
     ObjectLoaderDirective,
-    PointLightDirective
+    PointLightDirective,
+    CubeDirective
   ]
 })
 export class ThreeHelpersModule { }
