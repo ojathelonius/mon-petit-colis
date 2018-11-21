@@ -1,0 +1,17 @@
+.creation-container {
+    display: flex;
+    height: 100%;
+    padding: 20px;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+    .controls-container {
+        flex: 1 0 300px;
+    }
+
+    .scene-container {
+        flex: 1 0 300px;
+        cursor: grab;
+    }
+
+}

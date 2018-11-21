@@ -1,19 +1,24 @@
 <div class="flex-container">
   <app-layout-header></app-layout-header>
   <div class="main-container">
-      <three-orbit-controls [rotateSpeed]=1 [zoomSpeed]=1.2 [listeningControlElement]=mainRenderer.renderPane>
+    <div class="creation-container">
+      <div class="controls-container"></div>
+      <div class="scene-container">
+        <three-orbit-controls [rotateSpeed]=1 [zoomSpeed]=1.2 [listeningControlElement]=mainRenderer.renderPane>
           <three-webgl-renderer #mainRenderer>
-        
+
             <three-perspective-camera [fov]=60 [near]=0.5 [far]=1100 positionX=5 positionY=7 positionZ=17></three-perspective-camera>
-        
+
             <three-scene>
               <!--<three-axes-helper size=200></three-axes-helper>-->
-              <three-grid-helper size=100 divisions=10></three-grid-helper>
+              <!-- <three-grid-helper size=100 divisions=10></three-grid-helper> -->
               <three-cube [width]=5 [height]=5 [depth]=5 color='rgb(173,135,98)'></three-cube>
-        
+
             </three-scene>
           </three-webgl-renderer>
         </three-orbit-controls>
+      </div>
+    </div>
   </div>
   <app-layout-footer></app-layout-footer>
 </div>

@@ -70,7 +70,8 @@ export class WebGLRendererComponent implements AfterViewInit {
     console.log('RendererComponent.startRendering');
     this.renderer = new THREE.WebGLRenderer({
       canvas: this.canvas,
-      antialias: true
+      antialias: true,
+      alpha: true
     });
     this.renderer.setPixelRatio(devicePixelRatio);
     this.renderer.setSize(this.canvas.clientWidth, this.canvas.clientHeight);
@@ -93,6 +94,7 @@ export class WebGLRendererComponent implements AfterViewInit {
       // console.log("render");
       // console.log(scene.getObject());
       // console.log(camera.camera);
+      this.renderer.setClearColor( 0xffffff, 0);
       this.renderer.render(sceneComponent.getObject(), cameraComponent.camera);
     }
     // }
