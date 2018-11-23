@@ -20,8 +20,11 @@ export class CubeDirective extends AbstractObject3D<THREE.Mesh> {
   }
 
   protected newObject3DInstance(): THREE.Mesh {
+    var thos = this;
     var boxBuffer : THREE.BoxBufferGeometry  = new THREE.BoxBufferGeometry(this.width, this.height, this.depth);
-    var texture : THREE.Texture = new THREE.TextureLoader().load( 'assets/textures/cardboard.jpg' );
+    var texture : THREE.Texture = new THREE.TextureLoader().load( 'assets/textures/cardboard.jpg', function() {
+      window.dispatchEvent(new Event('resize'));
+    });
     var material : THREE.MeshBasicMaterial = new THREE.MeshBasicMaterial({map: texture});
     console.log('CubeDirective.newObject3DInstance');
     return new THREE.Mesh(boxBuffer, material);
