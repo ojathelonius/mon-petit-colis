@@ -2,7 +2,25 @@
     height: 80px;
     background-color: white;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     box-shadow: 0px -1px 15px 2px #90909024;
+    overflow: hidden;
+
+    .logo_footer {
+        height: 70px;
+    }
+
+    
+
+    a {
+        color: #6f6666;
+        cursor: pointer;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .fab {
+        margin-right: 5px;
+    }
 }
