@@ -1,1 +1,2 @@
 * Use PointLight to cast shadow on element, see the [LightShadow docs](https://threejs.org/docs/#api/en/lights/shadows/LightShadow)
+* Find a better way to force update threejs components, rather than firing a resize event on init
