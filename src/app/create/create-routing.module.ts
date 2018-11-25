@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CreateComponent } from './create.component';
 import { EditorComponent } from '../editor/editor.component';
+import { ServiceComponent } from 'src/app/service/service.component';
 
 const routes: Routes = [{
   path: '',
@@ -10,6 +11,10 @@ const routes: Routes = [{
 {
   path: 'editor',
   component: EditorComponent
+},
+{
+  path: 'service',
+  component: ServiceComponent
 }];
 
 @NgModule({

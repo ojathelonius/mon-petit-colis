@@ -21,11 +21,11 @@
         overflow: hidden;
         cursor: pointer;
         max-height: 500px;
+        border: 1px solid #8e7f6f3b;
 
         &:hover {
             box-shadow: 0 4px 1px -1px rgba(0,0,0,.2), 0 4px 1px 0 rgba(0,0,0,.14), 0 4px 3px 0 rgba(0,0,0,.12);
         }
     }
-
 
 }

@@ -5,6 +5,7 @@ import { CreateComponent } from './create.component';
 import { EditorModule } from '../editor/editor.module';
 import { SharedModule } from '../shared/shared.module';
 import { MatCardModule } from '@angular/material';
+import { ServiceModule } from '../service/service.module';
 
 @NgModule({
   declarations: [CreateComponent],
@@ -13,7 +14,8 @@ import { MatCardModule } from '@angular/material';
     CreateRoutingModule,
     EditorModule,
     SharedModule,
-    MatCardModule
+    MatCardModule,
+    ServiceModule
   ]
 })
 export class CreateModule { }
