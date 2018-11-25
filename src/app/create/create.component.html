@@ -1,3 +1,28 @@
-<p>
-  create works!
-</p>
+<div class="flex-container">
+  <app-layout-header></app-layout-header>
+  <div class="main-container">
+    <div class="section-row">
+      <div class="section">
+        <mat-card class="example-card" routerLink="./editor">
+          <mat-card-header>
+            <mat-card-title>Créez votre propre colis</mat-card-title>
+            <mat-card-subtitle>à l'aide de notre outil en ligne</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="assets/images/diy.jpg">
+        </mat-card>
+
+      </div>
+      <div class="section">
+        <mat-card class="example-card" routerLink="./service">
+          <mat-card-header>
+            <mat-card-title>Faites appel à nos designers</mat-card-title>
+            <mat-card-subtitle>Une équipe talentueuse à votre service</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="assets/images/designer.jpg">
+        </mat-card>
+
+      </div>
+    </div>
+  </div>
+  <app-layout-footer></app-layout-footer>
+</div>
