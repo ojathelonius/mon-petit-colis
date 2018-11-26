@@ -6,13 +6,25 @@
     overflow: hidden;
 
     .controls-container {
-        flex: 1 0 300px;
+        padding: 20px;
+        flex: 1;
     }
 
     .scene-container {
         flex: 1 0 300px;
         cursor: grab;
         max-height: 600px;
+    }
+
+    .editor-form {
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    canvas {
+        width: 100%;
+        height: 100%;
     }
 
 }
