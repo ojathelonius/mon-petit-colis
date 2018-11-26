@@ -23,4 +23,10 @@
     .fab {
         margin-right: 5px;
     }
+
+    .flex-footer {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
 }
