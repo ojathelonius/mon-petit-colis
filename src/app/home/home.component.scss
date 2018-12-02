@@ -14,6 +14,22 @@
             text-align: center;
             justify-content: center;
             margin: 10px;
+            flex-direction: column;
+
+            h1 {
+                font-size: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .section-img {
+                width: 400px;
+            }
+
+            .logo_laposte {
+                height: 80px;
+            }
         }
     }
 }
