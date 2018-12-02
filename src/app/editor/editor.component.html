@@ -3,25 +3,45 @@
   <div class="main-container">
     <div class="creation-container">
       <div class="controls-container">
-        <mat-card>
+        <mat-card class="form-card">
           <h2>Taille de colis</h2>
           <form class="editor-form" (ngSubmit)="onSubmit()">
-            <mat-form-field >
+            <mat-form-field>
               <input matInput placeholder="Hauteur" [(ngModel)]="package.height" name="height">
               <span matSuffix>cm</span>
             </mat-form-field>
 
             <mat-form-field>
-                <input matInput placeholder="Largeur" [(ngModel)]="package.width" name="width">
-                <span matSuffix>cm</span>
+              <input matInput placeholder="Largeur" [(ngModel)]="package.width" name="width">
+              <span matSuffix>cm</span>
             </mat-form-field>
             <button type="submit" mat-raised-button>Appliquer</button>
           </form>
         </mat-card>
+        <!-- Content below is a dummy form, used for demo purposes -->
+        <mat-card class="form-card">
+          <h2>Epaisseur du carton</h2>
+          <form class="editor-form">
+            <mat-radio-group class="example-radio-group" [(ngModel)]="selectedThickness">
+              <mat-radio-button class="example-radio-button" *ngFor="let curThickness of thickness" [value]="selectedThickness">
+                {{curThickness}}
+              </mat-radio-button>
+            </mat-radio-group>
+          </form>
+        </mat-card>
+        <mat-card class="form-card">
+          <h2>Coloris</h2>
+          <form class="editor-form">
+            <h3>Coloris principal</h3>
+            <mcc-color-picker></mcc-color-picker>
+            <h3>Coloris secondaire</h3>
+            <mcc-color-picker></mcc-color-picker>
+          </form>
+        </mat-card>
       </div>
       <div class="scene-container">
-          <canvas #canvas >
-            </canvas>
+        <canvas #canvas>
+        </canvas>
       </div>
     </div>
   </div>

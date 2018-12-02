@@ -28,6 +28,10 @@ export class EditorComponent implements AfterViewInit, OnInit {
 
   private package = new Package(10, 10, 10);
 
+  /* Demo, unused content */
+  public selectedThickness: string;
+  public thickness: string[] = ['2mm', '3mm', '5mm', '6mm'];
+
   constructor() {
     this.render = this.render.bind(this);
   }

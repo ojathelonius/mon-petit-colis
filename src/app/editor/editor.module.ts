@@ -8,6 +8,8 @@ import { MatInputModule } from '@angular/material';
 import { MatCardModule } from '@angular/material';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
+import { MatRadioModule } from '@angular/material/radio';
+import { MccColorPickerModule } from 'material-community-components';
 
 @NgModule({
   declarations: [EditorComponent],
@@ -19,7 +21,9 @@ import { MatButtonModule } from '@angular/material/button';
     MatInputModule,
     FormsModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatRadioModule,
+    MccColorPickerModule
   ]
 })
 export class EditorModule { } 
