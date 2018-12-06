@@ -10,7 +10,8 @@ import { Package } from 'src/app/shared/models/package.model';
 export class EditorComponent implements AfterViewInit, OnInit {
 
   /* Tools */
-  public selectedColor: string = '#ff0000';
+  public selectedColor: string = '#ffffff';
+  public selectedSecondaryColor: string = '#ffffff';
 
   /* Demo, unused content */
   public selectedThickness: string;
@@ -36,7 +37,11 @@ export class EditorComponent implements AfterViewInit, OnInit {
 
   private packageWireframe: THREE.LineSegments;
 
-  public package = new Package(10, 10, 10, new THREE.Color(this.selectedColor));
+  private packageMainSide: THREE.Mesh;
+
+  private packageSecondarySide: THREE.Mesh;
+
+  public package = new Package(10, 10, 10, new THREE.Color(this.selectedColor), new THREE.Color(this.selectedSecondaryColor));
 
   constructor() {
     this.render = this.render.bind(this);
@@ -138,9 +143,23 @@ export class EditorComponent implements AfterViewInit, OnInit {
     var material: THREE.MeshBasicMaterial = new THREE.MeshBasicMaterial({ color: this.package.color });
     this.packageMesh = new THREE.Mesh(boxBuffer, material);
     var edges = new THREE.EdgesGeometry(boxBuffer);
-    this.packageWireframe = new THREE.LineSegments( edges, new THREE.LineBasicMaterial( { color: 0x000000 } ) );
+    this.packageWireframe = new THREE.LineSegments(edges, new THREE.LineBasicMaterial({ color: 0x000000 }));
     this.scene.add(this.packageMesh);
     this.scene.add(this.packageWireframe);
+
+    var planeGeometry = new THREE.PlaneGeometry(this.package.width, this.package.height);
+    var planeMaterial = new THREE.MeshBasicMaterial({ color: this.package.secondaryColor, side: THREE.DoubleSide });
+
+
+
+    this.packageMainSide = new THREE.Mesh(planeGeometry, planeMaterial);
+    this.packageMainSide.translateZ((this.package.depth/2 +0.01));
+
+    this.packageSecondarySide = new THREE.Mesh(planeGeometry, planeMaterial);
+    this.packageSecondarySide.translateZ(-(this.package.depth/2 +0.01));
+
+    this.scene.add(this.packageMainSide);
+    this.scene.add(this.packageSecondarySide);
   }
 
   public updatePackage() {
@@ -152,6 +171,8 @@ export class EditorComponent implements AfterViewInit, OnInit {
   public clearScene() {
     this.scene.remove(this.packageMesh);
     this.scene.remove(this.packageWireframe);
+    this.scene.remove(this.packageMainSide);
+    this.scene.remove(this.packageSecondarySide);
   }
 
   @HostListener('window:resize', ['$event'])
@@ -168,6 +189,11 @@ export class EditorComponent implements AfterViewInit, OnInit {
 
   public onColorSelect(color) {
     this.package.updateColor(color);
+    this.updatePackage();
+  }
+
+  public onSecondaryColorSelect(color) {
+    this.package.updateSecondaryColor(color);
     this.updatePackage();
   }
 }
