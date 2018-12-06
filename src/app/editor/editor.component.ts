@@ -34,6 +34,8 @@ export class EditorComponent implements AfterViewInit, OnInit {
 
   private packageMesh: THREE.Mesh;
 
+  private packageWireframe: THREE.LineSegments;
+
   public package = new Package(10, 10, 10, new THREE.Color(this.selectedColor));
 
   constructor() {
@@ -134,13 +136,21 @@ export class EditorComponent implements AfterViewInit, OnInit {
     var boxBuffer = new THREE.BoxBufferGeometry(this.package.width, this.package.height, this.package.depth);
     var material: THREE.MeshBasicMaterial = new THREE.MeshBasicMaterial({ color: this.package.color });
     this.packageMesh = new THREE.Mesh(boxBuffer, material);
+    var edges = new THREE.EdgesGeometry(boxBuffer);
+    this.packageWireframe = new THREE.LineSegments( edges, new THREE.LineBasicMaterial( { color: 0x000000 } ) );
     this.scene.add(this.packageMesh);
+    this.scene.add(this.packageWireframe);
   }
 
   public updatePackage() {
-    this.scene.remove(this.packageMesh);
+    this.clearScene();
     this.addPackage();
     this.render();
+  }
+
+  public clearScene() {
+    this.scene.remove(this.packageMesh);
+    this.scene.remove(this.packageWireframe);
   }
 
   @HostListener('window:resize', ['$event'])
