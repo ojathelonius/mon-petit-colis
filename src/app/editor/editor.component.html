@@ -33,9 +33,9 @@
           <h2>Coloris</h2>
           <form class="editor-form">
             <h3>Coloris principal</h3>
-            <mcc-color-picker></mcc-color-picker>
+            <mcc-color-picker (selected)="onColorSelect($event)" btnCancel="Annuler" btnConfirm="Appliquer"></mcc-color-picker>
             <h3>Coloris secondaire</h3>
-            <mcc-color-picker></mcc-color-picker>
+            <mcc-color-picker (selected)="selectedColor = $event" btnCancel="Annuler" btnConfirm="Appliquer"></mcc-color-picker>
           </form>
         </mat-card>
       </div>

@@ -9,7 +9,15 @@ import { Package } from 'src/app/shared/models/package.model';
 })
 export class EditorComponent implements AfterViewInit, OnInit {
 
+  /* Tools */
+  public selectedColor: string = '#ff0000';
 
+  /* Demo, unused content */
+  public selectedThickness: string;
+  public thickness: string[] = ['2mm', '3mm', '5mm', '6mm'];
+
+
+  /* THREEJS assets */
   private renderer: THREE.WebGLRenderer;
   private camera: THREE.PerspectiveCamera;
   private cameraTarget: THREE.Vector3;
@@ -24,13 +32,9 @@ export class EditorComponent implements AfterViewInit, OnInit {
   @ViewChild('canvas')
   private canvasRef: ElementRef;
 
-  private packageMesh : THREE.Mesh;
+  private packageMesh: THREE.Mesh;
 
-  private package = new Package(10, 10, 10);
-
-  /* Demo, unused content */
-  public selectedThickness: string;
-  public thickness: string[] = ['2mm', '3mm', '5mm', '6mm'];
+  public package = new Package(10, 10, 10, new THREE.Color(this.selectedColor));
 
   constructor() {
     this.render = this.render.bind(this);
@@ -128,8 +132,8 @@ export class EditorComponent implements AfterViewInit, OnInit {
 
   public addPackage() {
     var boxBuffer = new THREE.BoxBufferGeometry(this.package.width, this.package.height, this.package.depth);
-    var material : THREE.MeshBasicMaterial = new THREE.MeshBasicMaterial({color: 0xff0000 });
-    this.packageMesh =  new THREE.Mesh(boxBuffer, material);
+    var material: THREE.MeshBasicMaterial = new THREE.MeshBasicMaterial({ color: this.package.color });
+    this.packageMesh = new THREE.Mesh(boxBuffer, material);
     this.scene.add(this.packageMesh);
   }
 
@@ -141,13 +145,18 @@ export class EditorComponent implements AfterViewInit, OnInit {
 
   @HostListener('window:resize', ['$event'])
   public onResize(event: Event) {
-      this.canvas.style.width = "100%";
-      this.canvas.style.height = "100%";
-      console.log("onResize: " + this.canvas.clientWidth + ", " + this.canvas.clientHeight);
+    this.canvas.style.width = "100%";
+    this.canvas.style.height = "100%";
+    console.log("onResize: " + this.canvas.clientWidth + ", " + this.canvas.clientHeight);
 
-      this.camera.aspect = this.getAspectRatio();
-      this.camera.updateProjectionMatrix();
-      this.renderer.setSize(this.canvas.clientWidth, this.canvas.clientHeight);
-      this.render();
+    this.camera.aspect = this.getAspectRatio();
+    this.camera.updateProjectionMatrix();
+    this.renderer.setSize(this.canvas.clientWidth, this.canvas.clientHeight);
+    this.render();
+  }
+
+  public onColorSelect(color) {
+    this.package.updateColor(color);
+    this.updatePackage();
   }
 }
