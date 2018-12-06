@@ -126,7 +126,8 @@ export class EditorComponent implements AfterViewInit, OnInit {
   }
 
   public addControls() {
-    this.controls = new THREE.OrbitControls(this.camera);
+    /* Limit the controls scope with the second argument */
+    this.controls = new THREE.OrbitControls(this.camera, document.getElementById('canvas'));
     this.controls.rotateSpeed = 1.0;
     this.controls.zoomSpeed = 1.2;
     this.controls.addEventListener('change', this.render);
