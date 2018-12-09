@@ -46,4 +46,17 @@
         margin-bottom: 10px;
     }
 
+    .flex-btn-container {
+        display: flex;
+
+        .button {
+            flex: 1;
+            height: 50px;
+
+            &:first-child {
+                margin-right: 10px;
+            }
+        }
+    }
+
 }

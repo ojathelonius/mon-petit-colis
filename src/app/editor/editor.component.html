@@ -43,6 +43,10 @@
             <mcc-color-picker (selected)="onSecondaryColorSelect($event)" btnCancel="Annuler" btnConfirm="Appliquer"></mcc-color-picker>
           </form>
         </mat-card>
+        <div class="flex-btn-container">
+          <button mat-raised-button class="button" color="warn">Annuler</button>
+          <button mat-raised-button class="button">Sauvegarder</button>
+        </div>
       </div>
       <div class="scene-container">
         <canvas #canvas id="canvas">
