@@ -1,5 +1,56 @@
 <div class="flex-container">
   <app-layout-header></app-layout-header>
-  <div class="main-container"></div>
+  <div class="main-container">
+    <mat-expansion-panel class="order-panel">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <b>Commande n°84320144</b>
+        </mat-panel-title>
+        <mat-panel-description>
+          Colis 30x20x10, design personnalisé (60 unités)
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div class="panel-body">
+        <div class="order-infos">
+          <mat-list>
+            <mat-list-item>
+              <mat-icon mat-list-icon>local_shipping</mat-icon>
+              <h4 mat-line>
+                <b>Livraison prévue le</b>
+              </h4>
+              <p mat-line>24/12/2018</p>
+            </mat-list-item>
+            <mat-list-item>
+              <mat-icon mat-list-icon>details</mat-icon>
+              <h4 mat-line>
+                <b>Nombre de produits</b>
+              </h4>
+              <p mat-line>60</p>
+            </mat-list-item>
+            <mat-list-item>
+              <mat-icon mat-list-icon>style</mat-icon>
+              <h4 mat-line>
+                <b>Type de design</b>
+              </h4>
+              <p mat-line>Personnalisé</p>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon mat-list-icon>photo_size_select_small</mat-icon>
+                <h4 mat-line>
+                  <b>Gabarit</b>
+                </h4>
+                <p mat-line>H30, L20, P10</p>
+              </mat-list-item>
+          </mat-list>
+        </div>
+        <img src="assets/images/example_package.jpg" class="example-package-img">
+      </div>
+
+      <mat-action-row>
+        <button mat-button color="warn"> Annuler</button>
+        <button mat-button color="primary">Voir la commande</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  </div>
   <app-layout-footer></app-layout-footer>
 </div>

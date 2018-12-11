@@ -1,0 +1,45 @@
+.main-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .order-panel {
+        margin: 10px;
+        width: 500px;
+    }
+
+    @media only screen and (min-width: 768px) {
+        .order-panel {
+            width: 800px;
+        }
+    }
+
+    @media only screen and (min-width: 1024px) {
+        .order-panel {
+            width: 1000px;
+        }
+    }
+
+    .example-package-img {
+        height: 200px;
+        margin-right: 40px;
+    }
+
+    .panel-body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between
+    }
+
+    .order-infos {
+        flex: 1
+    }
+
+    .mat-icon {
+        color: #614528;
+    }
+
+    b {
+        color: #614528
+    }
+}

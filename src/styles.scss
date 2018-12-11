@@ -33,3 +33,9 @@ html, body {
 *:focus {
   outline: none;
 }
+
+.mat-button {
+  &.mat-primary {
+    color: #614528;
+  }
+}
