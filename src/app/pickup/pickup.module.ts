@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CartRoutingModule } from './cart-routing.module';
-import { CartComponent } from './cart.component';
+import { PickupRoutingModule } from './pickup-routing.module';
+import { PickupComponent } from './pickup.component';
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
-  declarations: [CartComponent],
+  declarations: [PickupComponent],
   imports: [
     CommonModule,
-    CartRoutingModule,
+    PickupRoutingModule,
     SharedModule
   ]
 })
-export class CartModule { }
+export class PickupModule { }

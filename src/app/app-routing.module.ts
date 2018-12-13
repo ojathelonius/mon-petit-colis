@@ -23,8 +23,8 @@ const routes: Routes = [
     loadChildren: './support/support.module#SupportModule'
   },
   {
-    path: 'cart',
-    loadChildren: './cart/cart.module#CartModule'
+    path: 'pickup',
+    loadChildren: './pickup/pickup.module#PickupModule'
   }
 ];
 
