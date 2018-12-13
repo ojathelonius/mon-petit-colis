@@ -43,6 +43,20 @@
             <mcc-color-picker (selected)="onSecondaryColorSelect($event)" btnCancel="Annuler" btnConfirm="Appliquer"></mcc-color-picker>
           </form>
         </mat-card>
+        <mat-card class="form-card">
+          <h2>Design intelligent</h2>
+          <form class="editor-form">
+            <h3>Votre logo</h3>
+            <input type="file">
+            <h3>Résultats</h3>
+            <h4>Couleur 1</h4>
+            <mcc-color-picker  btnCancel="Annuler" btnConfirm="Appliquer"></mcc-color-picker>
+            <h4>Couleur 2</h4>
+            <mcc-color-picker btnCancel="Annuler" btnConfirm="Appliquer"></mcc-color-picker>
+            <h4>Couleur 3</h4>
+            <mcc-color-picker btnCancel="Annuler" btnConfirm="Appliquer"></mcc-color-picker>
+          </form>
+        </mat-card>
         <div class="flex-btn-container">
           <button mat-raised-button class="button" color="warn">Annuler</button>
           <button mat-raised-button class="button">Sauvegarder</button>

@@ -1,6 +1,31 @@
 <div class="flex-container">
   <app-layout-header></app-layout-header>
   <div class="main-container">
+    <div class="flex-filler"></div>
+    <mat-card class="form-card">
+      <h2>Demande d'étude graphique</h2>
+      <form class="service-form">
+        <div class="fields">
+          <mat-form-field>
+            <input matInput placeholder="Nom de l'entreprise" name="name">
+          </mat-form-field>
+
+          <mat-form-field>
+            <textarea matInput placeholder="Description" name="description" class="service-description"></textarea>
+          </mat-form-field>
+
+          <h3>Couleurs</h3>
+          <h4>Couleur 1</h4>
+          <mcc-color-picker btnCancel="Annuler" btnConfirm="Appliquer"></mcc-color-picker>
+          <h4>Couleur 2</h4>
+          <mcc-color-picker btnCancel="Annuler" btnConfirm="Appliquer"></mcc-color-picker>
+          <h4>Couleur 3</h4>
+          <mcc-color-picker btnCancel="Annuler" btnConfirm="Appliquer"></mcc-color-picker>
+        </div>
+        <button type="submit" mat-raised-button class="submit-btn" color="primary">Envoyer</button>
+      </form>
+    </mat-card>
+    <div class="flex-filler"></div>
   </div>
   <app-layout-footer></app-layout-footer>
 </div>

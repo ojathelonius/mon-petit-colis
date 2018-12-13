@@ -1,0 +1,44 @@
+.main-container {
+    display: flex;
+    justify-content: center;
+
+    .form-card {
+        margin: 40px 10px;
+        flex: 0 1 800px;
+        display: flex;
+        flex-direction: column;
+        
+
+        h2 {
+            text-align: center;
+        }
+
+        .service-form {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex: 1;
+        }
+    }
+
+    .flex-filler {
+        flex: 0 1 100px;
+    }
+
+    .service-description {
+        height: 150px;
+    }
+
+    .submit-btn {
+        width: 200px;
+        margin: 0 auto;
+        background-color: #4c4c4c; 
+    }
+
+    .fields {
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+}
