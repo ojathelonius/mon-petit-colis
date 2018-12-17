@@ -4,6 +4,8 @@ This is the code of the "Mon petit colis" prototype that was submitted as a part
 
 "Mon petit colis" aims at providing businesses a way to customize, print and order packages to ship their products with style. 
 
+The project was awarded fourth place after being presented at La Poste offices on Dec 14th.
+
 
 ## Showcase
 ### Demo
