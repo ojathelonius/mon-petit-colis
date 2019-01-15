@@ -8,8 +8,6 @@ The project was awarded fourth place after being presented at La Poste offices o
 
 
 ## Showcase
-### Demo
-A demo is temporarily available on https://monpetitcolis.johanet.fr/ .
 
 ### Video
 A typical user story as well as a short demo is available [on YouTube](https://www.youtube.com/watch?v=I9kZWvODpn8&feature=youtu.be).
